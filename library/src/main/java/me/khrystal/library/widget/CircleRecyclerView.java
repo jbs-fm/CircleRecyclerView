@@ -139,6 +139,8 @@ public class CircleRecyclerView extends RecyclerView implements View.OnClickList
     }
 
     public void smoothScrollToView(View v) {
+        if (v == null) return;
+
         int distance = 0;
         if (getLayoutManager() instanceof LinearLayoutManager) {
             if (getLayoutManager().canScrollVertically()) {
